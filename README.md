@@ -8,7 +8,7 @@ A simple backend service for task management built with **.NET 8** and **Entity 
 ##  Getting Started
 
 ### 1. Clone the repository:
-```bash
+
 git clone https://github.com/vzxtq/Task-Management.git
 cd task-management-backend
 
