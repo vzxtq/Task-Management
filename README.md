@@ -1,45 +1,50 @@
-Overview
-A simple backend service built with .NET 8 and Entity Framework that allows users to manage their tasks. Users can register, log in, and perform CRUD operations (Create, Read, Update, Delete) on their tasks. Each user’s tasks are secured through JWT authentication.
+# Task Management System Backend
 
-Setup Instructions
-Clone the repository:
+## 📚 Overview
+A simple backend service for task management built with **.NET 8** and **Entity Framework**. This system allows users to register, log in, and manage their tasks (create, update, delete, and view). All tasks are associated with specific users and protected using **JWT authentication**.
 
-bash
-Copy code
-git clone <repository-link>  
-cd task-management-backend  
-Configure the database:
+---
 
-Open appsettings.json and update the connection string:
+## 🚀 Getting Started
+
+### 1. Clone the repository:
+```bash
+git clone <repository-url>
+cd task-management-backend
+2. Configure the database:
+Open the appsettings.json file and update the connection string with your database details:
+
 json
 Copy code
-"ConnectionStrings": {  
-  "DefaultConnection": "YourDatabaseConnectionString"  
-}  
-Apply migrations to create the database:
-
+"ConnectionStrings": {
+  "DefaultConnection": "YourDatabaseConnectionString"
+}
+3. Apply migrations and create the database:
 bash
 Copy code
-dotnet ef database update  
-Run the project:
-
+dotnet ef database update
+4. Run the application:
 bash
 Copy code
-dotnet run  
+dotnet run
 The API will be available at http://localhost:5000.
 
-API Endpoints
-User Endpoints:
-POST /users/register – Register a new user.
-POST /users/login – Log in and receive a JWT.
-Task Endpoints (JWT required):
-POST /tasks – Create a new task.
-GET /tasks – Get a list of tasks (with optional filters).
-GET /tasks/{id} – Get details of a specific task.
-PUT /tasks/{id} – Update a task.
-DELETE /tasks/{id} – Delete a task.
-Features
-JWT Authentication: Ensures only logged-in users can manage their tasks.
-Task Filtering & Sorting: Filter tasks by status, due date, and priority.
-Pagination: Get tasks in manageable pages.
-Secure Passwords: Passwords are hashed before storin
+📖 API Endpoints
+🔑 User Endpoints:
+POST /users/register — Register a new user.
+POST /users/login — Authenticate a user and receive a JWT.
+📋 Task Endpoints (JWT required):
+POST /tasks — Create a new task.
+GET /tasks — Retrieve a list of tasks with optional filtering and sorting.
+GET /tasks/{id} — Retrieve task details by ID.
+PUT /tasks/{id} — Update an existing task.
+DELETE /tasks/{id} — Delete a task by ID.
+⚙️ Features
+JWT Authentication: Secure all task-related operations to ensure only authenticated users can access their data.
+Task Management: Users can manage tasks including setting status and priority.
+Filtering & Sorting: Support for filtering tasks by status, due date, and priority, with sorting capabilities.
+🛠️ Technologies Used
+.NET 8
+Entity Framework Core
+JWT Authentication
+SQL Database
